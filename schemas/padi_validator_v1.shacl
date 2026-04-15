@@ -1,0 +1,19 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix padi: <https://padi.standard/schema#> .
+
+padi:MedicalObjectShape
+    a sh:NodeShape ;
+    sh:targetClass padi:MedicalObject ;
+    sh:property [
+        sh:path padi:encryptedHash ;
+        sh:datatype xsd:string ;
+        sh:minLength 64 ;
+        sh:maxLength 64 ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path padi:isSovereign ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+    ] .
