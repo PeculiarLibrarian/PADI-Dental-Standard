@@ -1,0 +1,8 @@
+@prefix padi: <https://padi.standard/schema#> .
+@prefix clinic: <https://nairobi-01.node/clinic/v1#> .
+
+clinic:Procedure_2026_04_15 a padi:ClinicalEvent ;
+    padi:patient clinic:PatientRecord_001 ;
+    padi:procedureCode "D0120" ;
+    padi:integrityStatus "Committed" ;
+    padi:provenance <https://nairobi-01.node/audit/log_789> .
